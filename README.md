@@ -1,21 +1,63 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# NHAI FaceRec — 100% Offline Facial Recognition & Liveness Detection
 
-# Run and deploy your AI Studio app
+Submission for **NHAI Innovation Hackathon 7.0**. An enterprise-grade, offline-first attendance verification application built with React Native, TFLite on-device inference, and advanced safety features.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/0ef3b869-21a1-4e4e-93b7-8b66ebed839f
+## 📱 App Visuals & UI
 
-## Run Locally
+| Home Screen | Facial Recognition | Liveness Detection |
+| :---: | :---: | :---: |
+| <img width="793" height="1600" alt="image" src="https://github.com/user-attachments/assets/0c8c9db9-bdb8-43d2-910f-27c45f26faed" />   |  <img width="864" height="1536" alt="WhatsApp Image 2026-06-02 at 2 34 39 PM" src="https://github.com/user-attachments/assets/95580575-1824-42c6-9b2f-804fa7db5c35" />   |  <img width="778" height="1600" alt="image" src="https://github.com/user-attachments/assets/8ce43537-1f66-400b-a2ad-506c68604b1d" />   |
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+---
 
+## 🎥 Video Demonstration
+**Watch the App in Action:** [NHAI FaceRec Demo](https://youtube.com/shorts/KHF1hko_ra0)
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+---
+
+## 🌟 Advanced Features 
+
+Beyond the mandatory requirements, NHAI FaceRec includes several high-impact features demonstrated in our video:
+
+### 🛡️ Multi-Stage Liveness & Anti-Spoofing
+Our liveness flow goes beyond simple blinks. It includes:
+- **Sensory Challenges:** Align → Blink → Smile → Turn Head.
+- **3D Face Mesh:** Real-time 468-landmark tracking to ensure 3D presence.
+- **Passive Liveness:** Integrated texture analysis to block high-res screen replays.
+
+### 👷 PPE Safety Compliance (Integrated AI)
+Utilizing a custom **YOLOv8-Nano** model, the app automatically verifies:
+- **Helmet Detection:** Ensuring workers are wearing safety headgear.
+- **High-Visibility Vest:** Verifying safety vest compliance during attendance.
+
+### 🌐 Connectivity-Independent Sync
+- **BLE Mesh Sync:** In zero-network zones, workers' devices can sync attendance logs via Bluetooth Low Energy (BLE), creating a decentralized ledger.
+- **DataLake Secure Ledger:** A transparent, audit-ready log of all verifications, including similarity scores and geofencing coordinates.
+
+### 🔒 Privacy & Security
+- **Local Differential Privacy (LDP):** Adds mathematical noise to embeddings to protect identity while maintaining accuracy.
+- **Secure Enclave Storage:** All biometric data is encrypted using AES-256 and stored in the device's hardware-backed secure storage.
+
+---
+
+## 📊 Performance Benchmarks
+- **Detection Latency:** ~15ms
+- **Embedding Extraction:** ~110ms
+- **PPE Safety Check:** ~45ms
+- **Total E2E Pipeline:** ~170ms (Target: <1000ms)
+
+---
+
+## 🏗 System Architecture & Datalake 3.0 Integration
+
+## Architecture Diagram 
+<img width="1600" height="453" alt="WhatsApp Image 2026-06-02 at 2 55 03 PM" src="https://github.com/user-attachments/assets/b2c2574a-5695-4927-af4d-953206a3336c" />  
+
+NHAI FaceRec is architected as a modular plug-in for the **Datalake 3.0** ecosystem, ensuring seamless integration and data migration.
+
+---
+
+## ⚖️ License
+Licensed under the Apache License, Version 2.0. Models owned by sirius-ai and Google MediaPipe.
