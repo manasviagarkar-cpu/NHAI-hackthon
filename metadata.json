@@ -1,0 +1,6 @@
+{
+  "name": "Face Recognition Liveness",
+  "description": "Secure on-device facial recognition and interactive liveness verification",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
